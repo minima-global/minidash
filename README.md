@@ -1,3 +1,70 @@
+# MiniDash
+
+Dashboard app with charts for recent historical data collected from the Minima blockchain.  
+
+Charts are
+- RAM
+- Chain Speed
+- Chain Weight
+- Difficulty
+- Transactions per Block
+
+Data is collected and disgarded after about 24h.
+
+
+![MiniDash](src/images/minidash.png)
+
+
+## Dependencies
+- ```node -v``` v10.19.0
+- ```npm -v``` 6.14.4
+- React 17.0.2
+- Redux 7.2.5
+
+
+## Run
+```npm install```
+```npm run build```
+Install into Minima store
+
+
+## UI Components
+
+Uses Material-UI and Chart.js
+
+## Redux
+State tree looks like
+
+```
+exampleState = {
+	counter: counterReducer, // TODO: remove, left as code example
+	init: {
+		connected: false,
+		latestMessage: ''
+	},
+	metricHistory: {
+		history: [{
+			chainlength: 5919,
+			chainspeed: 0.05,
+			chainweight: '4071132619641',
+			id: 1,
+			ram: 115,
+			ramUnits: 'MB',
+			time: '2021-09-13T10:07:21.000Z',
+			difficulty: 1.2008226091250982e+147,
+			blockNumber: 562676,
+			transactionCount: 7
+		}],
+		currentStatus: null
+	}
+}
+
+```
+
+
+
+
+
 need this property in package.json ```"homepage": "./",```
 
 dev tools ```"devDependencies": {
