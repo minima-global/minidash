@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "latest",
     "@reduxjs/toolkit": "^1.6.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -12,7 +13,11 @@
     "@types/react": "^16.14.15",
     "@types/react-dom": "^16.9.14",
     "@types/react-redux": "^7.1.18",
+    "chart.js": "^3.5.1",
+    "date-fns": "^2.23.0",
+    "minima": "file:minima-0.96.20.tgz",
     "react": "^17.0.2",
+    "react-chartjs-2": "^3.0.4",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.5",
     "react-scripts": "4.0.3",
@@ -20,7 +25,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && zip -r minidash2.minidapp build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -38,5 +43,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "homepage": "./",
+  "devDependencies": {
+    "jest-canvas-mock": "^2.3.1",
+    "redux-devtools-extension": "^2.13.9"
   }
 }

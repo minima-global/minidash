@@ -1,3 +1,12 @@
+need this property in package.json ```"homepage": "./",```
+
+dev tools ```"devDependencies": {
+    "redux-devtools-extension": "^2.13.9"
+  }```
+
+import minima ```"minima": "file:minima-0.96.20.tgz",```
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
