@@ -42,6 +42,9 @@ const ChainWeightChart = () => {
         },
         responsive: true,
         maintainAspectRatio: false,
+        animation: {
+            duration: 0
+        }
     }
 
     const chainWeightData: any = chainWeightHistory.map((row: any) => {

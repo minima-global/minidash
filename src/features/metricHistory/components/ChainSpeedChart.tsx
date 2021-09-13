@@ -42,6 +42,9 @@ const ChainSpeedChart = () => {
         },
         responsive: true,
         maintainAspectRatio: false,
+        animation: {
+            duration: 0
+        }
     }
 
     const chainSpeedData: any = chainSpeedHistory.map((row: any) => {

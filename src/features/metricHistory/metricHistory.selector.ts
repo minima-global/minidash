@@ -11,7 +11,7 @@ const extractRamPoint = (row: Metric) => {
     return {
         x: row.time,
         y: row.ram,
-        label: format(row.time,'HH:mm:ss')
+        label: format(row.time,'HH:mm')
     }
 }
 
@@ -19,7 +19,7 @@ const extractChainSpeedPoint = (row: Metric) => {
     return {
         x: row.time,
         y: row.chainspeed,
-        label: format(row.time,'HH:mm:ss')
+        label: format(row.time,'HH:mm')
     }
 }
 
@@ -27,7 +27,7 @@ const extractChainWeightPoint = (row: Metric) => {
     return {
         x: row.time,
         y: row.chainweight,
-        label: format(row.time,'HH:mm:ss')
+        label: format(row.time,'HH:mm')
     }
 }
 
@@ -35,7 +35,7 @@ const extractDifficultyPoint = (row: Metric) => {
     return {
         x: row.time,
         y: row.difficulty,
-        label: format(row.time,'HH:mm:ss')
+        label: format(row.time,'HH:mm')
     }
 }
 

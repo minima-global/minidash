@@ -8,7 +8,7 @@ function App() {
 	const dispatch = useAppDispatch()
 
 	useEffect(() => {
-		// dispatch(minimaInit())
+		dispatch(minimaInit())
 	},[dispatch])
 
 
