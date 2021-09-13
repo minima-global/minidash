@@ -52,11 +52,6 @@ export const minimaGetMetrics = createAsyncThunk(
 );
 
 
-// The function below is called a thunk and allows us to perform async logic. It
-// can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
-// will call the thunk with the `dispatch` function as the first argument. Async
-// code can then be executed and other actions can be dispatched. Thunks are
-// typically used to make async requests.
 export const minimaGetStatus = createAsyncThunk(
     'metricHistory/getStatus',
     async () => {
@@ -98,16 +93,4 @@ export const newBlock = (msg: any): AppThunk => (dispatch, getState) => {
     dispatch(minimaGetStatus())
 };
 
-
-
-// export const selectCount = (state: RootState) => state.counter.value;
-
-// export const selectChainSpeedHistory = (state: RootState) => [];
-// export const selectChainWeightHistory = (state: RootState) => [];
-// export const selectDifficultyHistory = (state: RootState) => [];
-// export const selectRamHistory = (state: RootState) => [];
-// export const selectTransactionCountHistory = (state: RootState) => [];
-
-
-// export const select1H = (state: RootState) => [];
 
