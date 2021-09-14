@@ -43,16 +43,16 @@ Minima.init(function(msg){
 
 
 function onConnected(connectedData) {
-    Minima.log('connected event')
+    // Minima.log('connected event')
     createMetricsTable();
 }
 
 function onNewBlock(newBlockData) {
-    Minima.log('new block event')
+    // Minima.log('new block event')
     const txpow = newBlockData.txpow
     const blockNumber = parseInt(txpow.header.block)
     const transactionCount = txpow.body.txnlist.length
-    Minima.log('block ' + blockNumber + ' has ' + transactionCount + ' transactions')
+    // Minima.log('block ' + blockNumber + ' has ' + transactionCount + ' transactions')
 
     // each row will be a new block
     // with transaction and status information
@@ -60,27 +60,27 @@ function onNewBlock(newBlockData) {
 }
 
 function onNewTransaction(newTransactionData) {
-    Minima.log('new transaction event')
+    // Minima.log('new transaction event')
 }
 
 function onNewTxPow(newTxPowData) {
-    Minima.log('new txpow event')
+    // Minima.log('new txpow event')
 }
 
 function onNewBalance(newBalanceData) {
-    Minima.log('new balance event')
+    // Minima.log('new balance event')
 }
 
 function onNetwork(networkData) {
-    Minima.log('network event')
+    // Minima.log('network event')
 }
 
 function onTxPowStart(txPowStartData) {
-    Minima.log('txpow start event')
+    // Minima.log('txpow start event')
 }
 
 function onTxPowEnd(txPowEndData) {
-    Minima.log('txpow end event')
+    // Minima.log('txpow end event')
 }
 
 
@@ -139,14 +139,14 @@ function storeMetric(metric) {
     
     Minima.sql(SQL, function(res){
         if(res.status == true) { 
-            Minima.log("metric row added success");
+            // Minima.log("metric row added success");
         }
     });
 
     // delete oldest rows
     Minima.sql(clipMetricsTable(MAX_ROWS_IN_TABLE), function(res){
         if(res.status == true) { 
-            Minima.log("deleted oldest rows");
+            // Minima.log("deleted oldest rows");
         }
     });
 
