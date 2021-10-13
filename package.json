@@ -14,6 +14,7 @@
     "@types/react-dom": "^16.9.14",
     "@types/react-redux": "^7.1.18",
     "chart.js": "^3.5.1",
+    "chartjs-chart-graph": "^3.5.0",
     "date-fns": "^2.25.0",
     "minima": "file:minima-0.96.20.tgz",
     "react": "^17.0.2",
