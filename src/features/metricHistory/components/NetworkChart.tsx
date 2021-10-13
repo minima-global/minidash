@@ -4,8 +4,8 @@ import {theme, themeStyles} from '../../../styles';
 import * as networkDetails from './tests/network_details.json'
 import * as miserables from './tests/miserables.json'
 
-import { Chart, LinearScale, Point } from 'chart.js';
-import { ForceDirectedGraphController, EdgeLine, DendogramController } from 'chartjs-chart-graph';
+import { Chart, registerables } from 'chart.js';
+import { ForceDirectedGraphController } from 'chartjs-chart-graph';
 
 
 // https://medium.com/@pdx.lucasm/canvas-with-react-js-32e133c05258
@@ -21,7 +21,7 @@ const NetworkChart = () => {
         context.fillStyle = '#800080'
         context.fillRect(0, 0, context.canvas.width, context.canvas.height)
 
-        Chart.register(ForceDirectedGraphController, DendogramController);
+        Chart.register(ForceDirectedGraphController, ...registerables);
         new Chart(context, {
             type: 'forceDirectedGraph',
             data: {
