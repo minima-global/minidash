@@ -17,9 +17,27 @@ const NetworkChart = () => {
     useEffect(() => {
         const canvas: any = canvasRef.current
         const context = canvas.getContext('2d')
-        //Our first draw
-        context.fillStyle = '#800080'
-        context.fillRect(0, 0, context.canvas.width, context.canvas.height)
+
+        // source and targets shoud be numbers, which is the index of the nodes in the array
+        // {
+        //     source: number;
+        //     target: number;
+        // }
+
+        const linksWithIndexes = miserables.links.map(edge => {
+            const sourceIndex = indexInNodeArray(miserables.nodes, edge.source)
+            const targetIndex = indexInNodeArray(miserables.nodes, edge.target)
+
+            return {
+                source: sourceIndex,
+                target: targetIndex,
+                value: edge.value
+            }
+        })
+
+        function indexInNodeArray(nodeArray: any, name:string) {
+            return nodeArray.findIndex((node: any) => node.id === name)
+        }
 
         Chart.register(ForceDirectedGraphController, ...registerables);
         new Chart(context, {
@@ -30,15 +48,8 @@ const NetworkChart = () => {
                 {
                   pointBackgroundColor: 'steelblue',
                   pointRadius: 5,
-                  data: [ // nodes as objects
-                    { x: 1, y: 2 }, // x, y will be set by the force directed graph and can be omitted
-                    { x: 3, y: 1 },
-                    { x: 5, y: 3 }
-                  ],
-                  edges: [ // edge list where source/target refers to the node index
-                    { source: 0, target: 1},
-                    { source: 0, target: 2}
-                  ]
+                  data: miserables.nodes,
+                  edges: linksWithIndexes,
                 },
               ],
             },
