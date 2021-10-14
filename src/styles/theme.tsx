@@ -518,6 +518,10 @@ const themeStyles = makeStyles({
     height: '20vh',
     position: 'relative'
   },
+  networkChartContainer: {
+    height: '70vh',
+    position: 'relative'
+  },
   dashboardMainContainer: {
     marginTop: '20px'
   }
