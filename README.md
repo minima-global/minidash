@@ -80,7 +80,7 @@ Data is collected in the Minima back end (see service.js) on the ```newblock``` 
 - Back end (service.js) stores the chart data in a table. Rows get deleted after the table gets to 4320 rows. This is because newblock events are roughly 20s apart and 4320 rows will be about 1days worth of data. The UI always requests all the rows and displays them in the chart. So charts will mostly have about 4320 data points which is probaly too much. One possible solution is to summerise this and display less points
 - The chart components use vh (viewport heights), so they will fit on one page in when full screen without scroll bars. The header uses pixels. This mixture of units may mean a scrollbar will could if the browser window is resized.
 - Redux action name strings are not consistent. Need to make them all the same
-- 
+- ```network-chart``` branch has the dashboard page replaced with a p2p network graph page. Eventually we will need to merge these and have a menu in the ui to switch between the pages
 
 ## Notes
 
